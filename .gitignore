@@ -1,0 +1,18 @@
+node_modules/
+.env
+.env.local
+
+# Working directories (large intermediate files)
+work/
+output/
+input/
+
+# Remotion build output
+remotion/out/
+remotion/.remotion/
+
+# Logs
+*.log
+
+# OS
+.DS_Store

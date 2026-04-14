@@ -1,0 +1,102 @@
+{
+  "$schema": "./style.schema.json",
+  "fonts": {
+    "japanese": "HiraginoSans-W9, \"Hiragino Sans\", \"ヒラギノ角ゴシック W9\", \"Hiragino Kaku Gothic ProN\", \"Noto Sans CJK JP\", \"Yu Gothic\", sans-serif",
+    "english": "Inter, Helvetica Neue, Arial, sans-serif"
+  },
+  "subtitles": {
+    "chunking": {
+      "minChars": 10,
+      "maxChars": 15,
+      "minDurationSec": 0.6
+    },
+    "main": {
+      "fontFamily": "japanese",
+      "fontWeight": 900,
+      "fontSizeRatio": 0.045,
+      "bottomRatio": 0.07,
+      "color": "#FFFFFF",
+      "strokeColor": "#000000",
+      "strokeWidthRatio": 0.08,
+      "shadow": "0 4px 16px rgba(0,0,0,0.6)",
+      "lineHeight": 1.3,
+      "maxWidthRatio": 0.92
+    },
+    "short": {
+      "fontFamily": "japanese",
+      "fontWeight": 900,
+      "fontSizeRatio": 0.058,
+      "bottomRatio": 0.18,
+      "color": "#FFFFFF",
+      "strokeColor": "#000000",
+      "strokeWidthRatio": 0.08,
+      "shadow": "0 4px 16px rgba(0,0,0,0.6)",
+      "lineHeight": 1.3,
+      "maxWidthRatio": 0.88
+    }
+  },
+  "broll": {
+    "defaultMode": "fullscreen",
+    "fadeInSec": 0.25,
+    "fadeOutSec": 0.25,
+    "pip": {
+      "widthRatio": 0.35,
+      "marginRatio": 0.02,
+      "borderColor": "rgba(255,255,255,0.9)",
+      "borderWidth": 4,
+      "borderRadius": 16,
+      "shadow": "0 12px 40px rgba(0,0,0,0.5)",
+      "position": "top-right"
+    },
+    "fullscreen": {
+      "backgroundColor": "#000000",
+      "objectFit": "contain"
+    }
+  },
+  "shortVideo": {
+    "background": "#0b0b10",
+    "title": {
+      "fontFamily": "japanese",
+      "fontWeight": 900,
+      "fontSizeRatio": 0.072,
+      "color": "#FFE14A",
+      "strokeColor": "#000000",
+      "strokeWidth": 4,
+      "topRatio": 0.06,
+      "fadeInSec": 0.3,
+      "holdSec": 1.9,
+      "fadeOutSec": 0.4
+    },
+    "hookText": {
+      "fontFamily": "japanese",
+      "fontWeight": 700,
+      "fontSizeRatio": 0.038,
+      "color": "#FFFFFF",
+      "strokeColor": "#000000",
+      "strokeWidth": 2,
+      "topRatio": 0.165
+    }
+  },
+  "generation": {
+    "language": "ja",
+    "imagePrimaryModel": "gemini",
+    "imageFallbackModel": "none",
+    "imageGeminiModelId": "gemini-3.1-flash-image-preview",
+    "imageMaxAttempts": 3,
+    "imageVerify": true,
+    "imageAspectRatio": "16:9",
+    "imageResolution": "2k",
+    "imageStyleGuide": "Modern, clean, professional B-roll illustration for a Japanese AI/IT explainer YouTube channel. Flat vector / infographic style with soft gradients, bright colors, and a friendly premium look. Minimalist composition with generous negative space. Think Japanese web design aesthetics (note, Studio Shelter, cotodama) rather than Western stock photography. STRONGLY PREFER images WITHOUT any text at all — a clean wordless illustration is the safest choice. If text is absolutely necessary to make the concept readable, it MUST be written in natural, idiomatic Japanese using only Hiragana, Katakana, and Kanji. Never use English letters. Never use romaji. Never use fake / garbled / gibberish characters that look like writing. When in doubt, omit text entirely.",
+    "imageNegative": "english text inside the image, romaji, latin alphabet letters, fake japanese characters, broken kanji, garbled text, gibberish writing, text labels in english, watermark, signature, low quality, generic stock photo, overly realistic photo, westerners in suits, AI-generated artifacts, distorted text, captcha-style text",
+    "videoStyleGuide": "Short cinematic motion-graphics B-roll (5–8 seconds) for a Japanese AI/IT explainer YouTube channel. Clean, modern, slightly flat illustration style with smooth camera moves (gentle push-in, subtle parallax, soft fade). 16:9 aspect ratio, 24fps feel, soft even lighting, premium minimalist look. STRONGLY PREFER clips WITHOUT on-screen text — visual storytelling is the goal. If text must appear, it MUST be natural Japanese (Hiragana/Katakana/Kanji only). Never English, never romaji, never broken characters. A wordless motion graphic is always preferred over one with questionable text rendering.",
+    "videoNegative": "english text, romaji, latin alphabet, fake japanese characters, garbled text, broken kanji, low quality, jittery camera, shaky cam, flickering, flashing lights, ai artifacts, distorted text captions",
+    "preferredAspectRatio": "16:9"
+  },
+  "_notes": {
+    "fontFamily": "Specify either a key from the 'fonts' map (e.g. 'japanese') or a raw CSS font-family string. The renderer resolves keys to the corresponding font stack.",
+    "ratios": "All *Ratio fields are fractions of the composition width or height. They scale automatically to 1080p (main) and 1920x1080 vertical (short) without manual tweaking.",
+    "broll.defaultMode": "Either 'pip' or 'fullscreen'. Used when Gemini does not specify a per-clip displayMode.",
+    "generation.imageStyleGuide": "Appended to every image prompt sent to Gemini. Edit this to change the visual identity of generated B-roll stills.",
+    "generation.videoStyleGuide": "Appended to every video prompt sent to Renoise."
+  }
+}

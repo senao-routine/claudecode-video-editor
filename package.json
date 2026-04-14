@@ -1,0 +1,40 @@
+{
+  "name": "ai-video-editor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Claude Code driven pipeline for turning screen recordings into main + short explainer videos",
+  "scripts": {
+    "preprocess": "tsx scripts/01-preprocess.ts",
+    "jetcut": "tsx scripts/02-jetcut.ts",
+    "broll": "tsx scripts/03-broll.ts",
+    "main": "tsx scripts/04-main-video.ts",
+    "short": "tsx scripts/05-short-video.ts",
+    "export-edit": "tsx scripts/06-export-edit.ts",
+    "youtube": "tsx scripts/07-youtube-description.ts",
+    "cleanup": "tsx scripts/utils-cleanup.ts",
+    "list": "tsx scripts/utils-list.ts",
+    "archive": "tsx scripts/utils-archive.ts",
+    "remotion:studio": "remotion studio remotion/src/index.ts",
+    "remotion:render": "remotion render remotion/src/index.ts"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@remotion/bundler": "^4.0.0",
+    "@remotion/cli": "^4.0.0",
+    "@remotion/layout-utils": "^4.0.446",
+    "@remotion/renderer": "^4.0.0",
+    "dotenv": "^16.4.5",
+    "openai": "^4.68.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/react": "^19.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
